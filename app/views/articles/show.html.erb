@@ -1,8 +1,11 @@
 <div class="container">
-	
+<% if (@article.archived = true && !user_signed_in?)  %>
+	<div class="alert alert-warning">This is an archived article. You must sign-in to continue.</div>
+<% else %>
 <h1>
   <%= @article.title %>
 </h1>
+<%= link_to "Edit", edit_article_path %>
 <small>
 	<%= if @article.protected 
 		"Article is Protected" 
@@ -14,4 +17,5 @@
 <p>
   <%= @article.text %>
 </p>
+<% end %>	
 </div>
