@@ -1,0 +1,12 @@
+<div class="container">	
+	<% for article in @articles %>
+	<div class="panel panel-default">
+  		<h3><%= link_to article.title, article %></h3>
+  		<hr>
+  		<%= article.text[0...400] %>
+  		<% if article.text.length > 400 %>
+  			...
+  		<% end %>
+	</div>
+	<% end %>
+</div>

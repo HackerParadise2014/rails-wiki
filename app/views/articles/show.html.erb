@@ -4,7 +4,9 @@
   <%= @article.title %>
 </h1>
 <small>
-	<%= @article.protected %>
+	<%= if @article.protected 
+		"Article is Protected" 
+		end %>
 </small>
 
 <hr>
