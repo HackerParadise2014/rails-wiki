@@ -12,10 +12,9 @@ class ArticlesController < ApplicationController
 	end
 	def edit
 		@article = Article.find(params[:id])
-		
 	end
 	private
   		def article_params
-    		params.require(:article).permit(:title, :text, :version, :references)
+    		params.require(:article).permit(:title, :text, :version, :references, :protected)
   		end
 end

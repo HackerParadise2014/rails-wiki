@@ -1,10 +1,15 @@
-<h1></h1>
-<p>
-  <strong>Title:</strong>
+<div class="container">
+	
+<h1>
   <%= @article.title %>
-</p>
- 
+</h1>
+<small>
+	<%= @article.protected %>
+</small>
+
+<hr>
+
 <p>
-  <strong>Text:</strong>
   <%= @article.text %>
 </p>
+</div>

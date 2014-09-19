@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration
       t.text :text
       t.integer :version
       t.text :references
+      t.boolean :protected
 
       t.timestamps
     end
