@@ -14,6 +14,10 @@
 ActiveRecord::Schema.define(version: 20140919045717) do
 
   create_table "articles", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "version"
+    t.text     "references"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
