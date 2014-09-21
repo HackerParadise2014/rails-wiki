@@ -1,5 +1,5 @@
 <div class="container">
-<% if (@article.archived = true && !user_signed_in?)  %>
+<% if (@article.archived && !user_signed_in?)  %>
 	<div class="alert alert-warning">This is an archived article. You must sign-in to continue.</div>
 <% else %>
 <h1>
