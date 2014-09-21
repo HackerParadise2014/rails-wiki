@@ -3,4 +3,5 @@ class Article < ActiveRecord::Base
 
   include FriendlyId
   friendly_id :title
+  has_paper_trail
 end
