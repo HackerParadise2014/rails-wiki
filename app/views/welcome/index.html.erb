@@ -1,16 +1,18 @@
 <div class="jumbotron rounded">
-	<h1>Welcome to the wiki!</h1>
-	<p>I'm a quick summary of the wiki, as well as a way to introduce new users and give out helpful <a href="">links</a>. You can also tell people how to <%= link_to "sign up", new_user_registration_path %> so they can access <em>protected</em> pages. </p>
-	<h2><%= link_to "Check out more articles...", articles_path %></h2>	
+  <h1>Welcome to the wiki!</h1>
+  <p>I'm a quick summary of the wiki, as well as a way to introduce new users and give out helpful <a href="">links</a>. You can also tell people how to <%= link_to "sign up", new_user_registration_path %> so they can access <em>protected</em> pages. </p>
+  <h2><%= link_to "Check out more articles...", articles_path %></h2>
 </div>
+
+
 <div class="container">
-		<% for article in @articles %>
-			<div class="panel panel-default">
-  				<h3><%= link_to article.title, article %></h3>
-  				<%= article.text[0...400] %>
-  				<% if article.text.length > 400 %>
-  					...
-  				<% end %>
-			</div>
-		<% end %>
+  <% @articles.each do |article| %>
+      <div class="panel panel-default">
+        <h3><%= link_to article.title, article %></h3>
+        <%= article.text.truncate(30) %>
+        <% if article.text.length > 400 %>
+            ...
+        <% end %>
+      </div>
+  <% end %>
 </div>

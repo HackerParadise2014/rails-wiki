@@ -45,7 +45,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+# gem "twitter-bootstrap-rails"
 gem "redcarpet"
 gem "faker"
 gem 'paper_trail', '~> 3.0.5'
