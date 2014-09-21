@@ -6,6 +6,7 @@ gem 'rails', '4.1.6'
 gem 'thin'
 gem 'will_paginate'
 gem 'friendly_id', github: 'norman/friendly_id'
+gem 'simple_form'
 
 group :development do
   gem 'sqlite3'
