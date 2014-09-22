@@ -28,6 +28,10 @@ class ArticlesController < ApplicationController
   end
 
   def versions
+    require 'differ'
+    Differ.format = :html
+
+
     @article = Article.friendly.find(params[:id])
   end
 
