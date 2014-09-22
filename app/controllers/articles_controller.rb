@@ -26,6 +26,10 @@ class ArticlesController < ApplicationController
     @article = Article.friendly.find(params[:id])
   end
 
+  def version
+  	@article = Article.friendly.find(params[:id])
+  end
+
   def update
     @article = Article.friendly.find(params[:id])
     if @article.update_attributes article_params
