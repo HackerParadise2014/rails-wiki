@@ -1,3 +1,11 @@
+<% if @versions_available && current_user %>
+    <div class="row">
+      <div class="12-cols pull-right">
+        <%= link_to "Change Log", versions_article_path(@article) %>
+      </div>
+    </div>
+<% end %>
+
 <div class="container">
   <% if (@article.archived && !user_signed_in?)  %>
       <div class="alert alert-warning">This is an archived article. You must sign-in to continue.</div>

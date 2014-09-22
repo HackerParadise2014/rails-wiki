@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
     @article = Article.friendly.find(params[:id])
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     @markdown_body = markdown.render(@article.text || '')
+    @versions_available = true if @article.versions.count > 1
   end
 
   def create
@@ -26,7 +27,7 @@ class ArticlesController < ApplicationController
     @article = Article.friendly.find(params[:id])
   end
 
-  def version
+  def versions
     @article = Article.friendly.find(params[:id])
   end
 

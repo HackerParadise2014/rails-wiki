@@ -2,8 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  resources :articles
-  get 'articles/:id/versions' => 'articles#version'
+  resources :articles do
+    member do
+      get :versions
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
