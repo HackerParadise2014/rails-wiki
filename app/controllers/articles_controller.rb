@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
   end
 
   def version
-  	@article = Article.friendly.find(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
 
   def update
