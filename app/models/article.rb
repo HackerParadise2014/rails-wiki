@@ -4,4 +4,15 @@ class Article < ActiveRecord::Base
   include FriendlyId
   friendly_id :title
   has_paper_trail
+
+  before_save :slugify_title
+
+  def slugify_title
+    self.title = title.downcase.gsub(" ","-")
+  end
+
+  def pretty_title
+    title.gsub("-",' ').titlecase
+  end
+
 end
