@@ -55,3 +55,5 @@ gem 'differ'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'rails_wiki', github: 'HackerParadise2014/rails_wiki_engine'

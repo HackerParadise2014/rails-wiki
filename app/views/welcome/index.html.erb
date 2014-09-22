@@ -4,7 +4,7 @@
   <% else %>
       <h1>Welcome to the wiki!</h1>
       <p>I'm a quick summary of the wiki, as well as a way to introduce new users and give out helpful <a href="">links</a>. You can also tell people how to <%= link_to "sign up", new_user_registration_path %> so they can access <em>protected</em> pages. </p>
-      <h2><%= link_to "Check out more articles...", articles_path %></h2>
+      <h2><%# link_to "Check out more articles...", articles_path %></h2>
   <% end %>
 </div>
 
@@ -12,7 +12,7 @@
 <div class="container">
   <% @articles.each do |article| %>
       <div class="panel panel-default">
-        <h3><%= link_to article.pretty_title, article %></h3>
+        <h3><%= link_to article.pretty_title, rails_wiki.article_path(article) %></h3>
         <%= article.text.truncate(30) %>
       </div>
   <% end %>
