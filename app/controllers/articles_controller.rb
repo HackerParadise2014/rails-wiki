@@ -14,6 +14,9 @@ class ArticlesController < ApplicationController
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
     @markdown_body = markdown.render(@article.text || '')
     @versions_available = true if @article.versions.count > 1
+
+  rescue ActiveRecord::RecordNotFound => ex
+    @article = Article.new(title: params[:id],text: "Article wasn't found, want to create one?")
   end
 
   def create

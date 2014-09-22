@@ -9,7 +9,7 @@
 <div class="container">
   <% if (@article.archived && !user_signed_in?)  %>
       <div class="alert alert-warning">This is an archived article. You must sign-in to continue.</div>
-  <% else %>
+  <% elsif @article.persisted? %>
       <h1>
         <%= @article.title %>
       </h1>
@@ -24,5 +24,7 @@
 
       <%= @markdown_body.html_safe %>
 
+  <% else %>
+      <%= render 'articles/new_form' %>
   <% end %>
 </div>
