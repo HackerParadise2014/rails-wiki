@@ -1,15 +1,16 @@
 GIT
+  remote: git://github.com/HackerParadise2014/rails_wiki_engine.git
+  revision: d9f5bcf75f73d1143c2ffc8e1f88fe8583471ef3
+  specs:
+    rails_wiki (0.0.1)
+      rails (~> 4.1.6)
+
+GIT
   remote: git://github.com/norman/friendly_id.git
   revision: 86dc21ec64dd36ce35224f504d4dddf086780b41
   specs:
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
-
-PATH
-  remote: /Users/troy/Documents/projects/rails_four/rails_wiki
-  specs:
-    rails_wiki (0.0.1)
-      rails (~> 4.1.6)
 
 GEM
   remote: https://rubygems.org/

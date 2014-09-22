@@ -7,3 +7,13 @@
       <h2><%# link_to "Check out more articles...", articles_path %></h2>
   <% end %>
 </div>
+
+
+<div class="container">
+  <% @articles.each do |article| %>
+      <div class="panel panel-default">
+        <h3><%= link_to article.pretty_title, rails_wiki.article_path(article) %></h3>
+        <%= article.text.truncate(30) %>
+      </div>
+  <% end %>
+</div>
