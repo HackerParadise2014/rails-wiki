@@ -5,6 +5,12 @@ GIT
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
 
+PATH
+  remote: /Users/troy/Documents/projects/rails_four/rails_wiki
+  specs:
+    rails_wiki (0.0.1)
+      rails (~> 4.1.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -165,6 +171,7 @@ DEPENDENCIES
   paper_trail (~> 3.0.5)
   pg
   rails (= 4.1.6)
+  rails_wiki!
   redcarpet
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

@@ -55,3 +55,5 @@ gem 'differ'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'rails_wiki', path: "/Users/troy/Documents/projects/rails_four/rails_wiki"
