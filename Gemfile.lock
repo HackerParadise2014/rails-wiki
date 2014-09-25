@@ -1,8 +1,10 @@
 GIT
   remote: git://github.com/HackerParadise2014/rails_wiki_engine.git
-  revision: a9cb82d9b159dba0f2dd15bfde4b7eb9cb47b2a9
+  revision: 9465fb07bf61aed66e6d35e87b7f0f85304bf6af
   specs:
-    rails_wiki (0.0.1)
+    rails_wiki (0.0.2)
+      devise
+      paper_trail (~> 3.0.5)
       rails (~> 4.1.6)
 
 GIT
