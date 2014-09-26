@@ -56,3 +56,4 @@ gem 'differ'
 # gem 'debugger', group: [:development, :test]
 
 gem 'rails_wiki', github: 'HackerParadise2014/rails_wiki_engine'
+# gem 'rails_wiki', path: '/Users/troy/Documents/projects/rails_four/rails_wiki'
